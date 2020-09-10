@@ -16,7 +16,7 @@ namespace LayersProject
         protected void btnsave_Click(object sender, EventArgs e)
         {
             ClsBusiness objclb = new ClsBusiness();
-            objclb.InsertUser(txtcomanyname.Text,Int32.Parse( IYear.Text), txtlocation.Text, state.Text);
+            objclb.InsertUser(TextBox1.Text,Int32.Parse(TextBox2.Text), TextBox3.Text, TextBox4.Text);
             GridView1.DataSource = objclb.SelectUser();
             GridView1.DataBind();
 

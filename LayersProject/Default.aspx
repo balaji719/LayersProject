@@ -10,55 +10,61 @@
     <form id="form1" runat="server">
         <div>
             <table>
-    <tr>
-    <td colspan="2">
-    3-tier</td>
-    </tr>
-    <tr>
-    <td>
-           Name of the Company :</td>
-    <td>
-    <asp:TextBox ID="txtcomanyname" runat="server"></asp:TextBox>
-    </td>
-    </tr>
-    <tr>
-    <td>
-   Incorporation(Year):
-    </td>
-    <td>
-    <asp:TextBox ID="IYear" runat="server"></asp:TextBox>
-    </td>
-    </tr>
-    <tr>
-    <td>
-    Location :
-    </td>
-    <td>
-    <asp:TextBox ID="txtlocation" runat="server"></asp:TextBox>
-    </td>
-    </tr>
-    <tr>
-    <td>
-    State :
-    </td>
-    <td>
-    <asp:TextBox ID="state" runat="server"></asp:TextBox>
-    </td>
-    </tr>
-    <tr>
-    <td>
-        &nbsp;</td>
-    <td>
-    <asp:Button ID="btnsave" runat="server" Text="SAVE" />
-    </td>
-    </tr>
-     </table>
-    
+            <tr>
+                <td class="auto-style1">Name of the Company</td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
+                    </td>
+                <td class="auto-style1"></td>
+            </tr>
+            <tr>
+                <td>Incorporation(year)</td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server" ></asp:TextBox>
+                   </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td style="margin-left: 80px">
+                    <asp:TextBox ID="TextBox3" runat="server" ></asp:TextBox>
+                  </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td style="margin-left: 80px">
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                  </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td style="margin-left: 80px">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td style="margin-left: 80px">
+                    <asp:Button ID="btnsave" runat="server" Text="Save" OnClick="btnsave_Click" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            
+        </table>
         </div>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" ShowHeaderWhenEmpty="true" EmptyDataText="true" runat="server" AutoGenerateColumns="false"  CellPadding="4" ForeColor="#333333" GridLines="None" Width="456px">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:TemplateField HeaderText="+"></asp:TemplateField>
+                
+                <asp:TemplateField  HeaderText="Name Of The Company">
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Incorporation(Year)">
+                </asp:TemplateField>
+                 <asp:TemplateField HeaderText="Location">
+                </asp:TemplateField>
+                 <asp:TemplateField HeaderText="State">
+                </asp:TemplateField>
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

@@ -11,13 +11,14 @@ namespace LayersProject
 {
     public partial class Default : System.Web.UI.Page
     {
+        ClsBusiness objclb;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
         protected void btnsave_Click(object sender, EventArgs e)
         {
-            ClsBusiness objclb = new ClsBusiness();
+             objclb = new ClsBusiness();
             objclb.InsertUser(TextBox1.Text,Int32.Parse(TextBox2.Text), TextBox3.Text, TextBox4.Text);
             Label3.Text = "Created and saved in Database"; 
             GridView1.DataSource = objclb.SelectUser();
@@ -42,7 +43,10 @@ namespace LayersProject
                     con.Close();
                 }
             }
-            this.DataBind();
+            Label4.Text = "Created and saved in Database";
+            ClsBusiness objclb1 = new ClsBusiness();
+            GridView1.DataSource = objclb1.SelectUser();
+            GridView1.DataBind();
 
         }
     }

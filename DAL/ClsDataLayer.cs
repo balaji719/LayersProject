@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
 
+using System.Web.UI.WebControls;
+
 namespace DAL
 {
     public class ClsDataLayer
@@ -27,13 +29,13 @@ namespace DAL
             //    DataTable dt = new DataTable();
             //    sda.Fill(dt);
             }
-            public object SelectData()
+            public DataTable SelectData()
         {
             // string mainconn = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
             string con = "Data Source=DESKTOP-DV6JK3I;Initial Catalog=Balaji;User ID=balaji;Password=balaji";
             SqlConnection sqlconn = new SqlConnection(con);
 
-         //   SqlConnection sqlconn = new SqlConnection(mainconn);
+         //  SqlConnection sqlconn = new SqlConnection(mainconn);
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand();
             string sqlquery = "select * from details";
